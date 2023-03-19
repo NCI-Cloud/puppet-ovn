@@ -16,9 +16,9 @@
 #   Defaults to undef
 #
 class ovn::northd(
-  $dbs_listen_ip = '0.0.0.0',
-  $dbs_cluster_local_addr = undef,
-  $dbs_cluster_remote_addr = undef,
+  String $dbs_listen_ip = '0.0.0.0',
+  Optional[String] $dbs_cluster_local_addr = undef,
+  Optional[String] $dbs_cluster_remote_addr = undef,
 ) {
   include ovn::params
   include vswitch::ovs
